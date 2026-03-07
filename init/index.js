@@ -6,10 +6,11 @@ require('dotenv').config({ path: '../.env' });
 
 const mapToken = process.env.MAP_TOKEN;
 const geocodingClient = mbxGeocoding({ accessToken: mapToken });
+const dbUrl = process.env.ATLASDB_URL;
 
 // 1. Database Connection Logic
 async function main() {
-    await mongoose.connect("mongodb://127.0.0.1:27017/homezy");
+    await mongoose.connect(dbUrl);
 }
 
 // 2. Data Initialization Logic
