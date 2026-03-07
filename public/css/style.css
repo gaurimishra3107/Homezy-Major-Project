@@ -99,16 +99,16 @@ body{
 }
 
 .btns {
-  display: flex;          /* buttons ko ek line me lane ke liye */
-  gap: 10px;              /* dono ke beech thoda space */
-  align-items: center;    /* vertical alignment fix */
+  display: flex;          
+  gap: 10px;              
+  align-items: center;    
 }
 
 .btns a,
 .btns button {
-  width: 120px;               /* equal width for both */
-  text-align: center;     /* text center align */
-  padding: 8px 12px;      /* uniform padding */
+  width: 120px;               
+  text-align: center;     
+  padding: 8px 12px;      
 }
 
 .show-card{
@@ -119,4 +119,14 @@ body{
 #map{
     height: 400px;
     width: 100vh;
+}
+
+.container { width: 100%; }
+
+@media (min-width: 768px) {
+    .container { width: 80%; }
+}
+
+@media (min-width: 1024px) {
+    .container { width: 1200px; }
 }
