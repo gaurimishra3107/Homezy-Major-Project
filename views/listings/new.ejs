@@ -1,0 +1,63 @@
+<% layout("/layouts/boilerplate") %>
+    <div class="row">
+        <div class="col-8 offset-2">
+            <br>
+            <h2><b>Create New Listing:</b></h2>
+            <form method="post" action="/listings" class="needs-validation" novalidate enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="title" class="form-label">Title</label>
+                    <input placeholder="Property Name" name="title" type="text" class="form-control" required>
+                    <div class="valid-feedback">Title looks good!</div>
+                    <div class="invalid-feedback">Please enter a valid title</div>
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description</label>
+                    <textarea placeholder="Description" name="description" class="form-control" required></textarea>
+                    <div class="invalid-feedback">Please enter a short description</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="image" class="form-label">Upload Listing Image</label>
+                    <input placeholder="URL" name="image" type="file" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label for="category" class="form-label">Category</label>
+                    <select name="category" class="form-select" aria-label="Mountains">
+                        <option selected>Select category</option>
+                        <option value="Beaches">Beaches</option>
+                        <option value="Arctic">Arctic</option>
+                        <option value="Farms">Farms</option>
+                        <option value="Camps">Camps</option>
+                        <option value="Pools">Pools</option>
+                        <option value="Castles">Castles</option>
+                        <option value="Cities">Cities</option>
+                        <option value="Rooms">Rooms</option>
+                    </select>
+                </div>
+
+                <div class="row">
+                    <div class="mb-3 col-md-4">
+                        <label for="price" class="form-label">Price</label>
+                        <input placeholder="Price" name="price" class="form-control" required>
+                        <div class="invalid-feedback">Please enter a valid price</div>
+                    </div>
+                    <div class="mb-3 col-md-8">
+                        <label for="location" class="form-label">Location</label>
+                        <input placeholder="Current Location" name="location" type="text" class="form-control" required>
+                        <div class="invalid-feedback">Please enter a valid location</div>
+                    </div>
+                </div>
+
+
+                <div class="mb-3">
+                    <label for="country" class="form-label">Country</label>
+                    <input placeholder="Country" name="country" type="text" class="form-control" required>
+                    <div class="invalid-feedback">Please enter a valid country</div>
+                </div>
+
+                <button class="btn btn-dark add-btn">Add</button>
+                <br><br>
+            </form>
+        </div>
+    </div>
